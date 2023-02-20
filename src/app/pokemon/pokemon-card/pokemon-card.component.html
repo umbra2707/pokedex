@@ -1,0 +1,11 @@
+<mat-card *ngIf="pokemon" class="example-card">
+  <mat-card-header>
+    <mat-card-title>{{ name | titlecase }}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image [src]=imageUrl>
+  <mat-card-actions align="end">
+    <div *ngFor="let type of pokemon.types" [class]="type.class">
+      <img [src]="type.url">
+    </div>
+  </mat-card-actions>
+</mat-card>
